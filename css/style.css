@@ -1,0 +1,304 @@
+/* Styles for basic css website. */
+
+
+/* General Link styles*/
+a{
+    text-decoration: none;
+    color:#c5f5fd;
+}
+a:hover{color:#795f6c;} /*Different states can be affected, such as the color when we hover over links or the active state.*/
+/*a:active{color:green;}*/
+
+/* Main body */
+body{
+    background-color:#272727;
+    color:#FDF7FA;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+/* container(s) for most text/image scrolls */
+.container{
+    width:70%;
+    margin:auto;
+    overflow:hidden; /*item just dissapear if they are not in container*/
+}
+
+.container2{
+    width:60%;
+    margin:auto;
+    overflow:hidden;
+    border: 3px black;
+}
+
+.container3{
+    width:40%;
+    margin:auto;
+    overflow:hidden;
+    border: 3px black;
+    text-align: center;
+}
+
+.container4{
+    width:60%;
+    margin:auto;
+    overflow:hidden;
+    border: 3px black;
+    text-align: left;
+}
+
+
+/* The main header */
+#main-head{
+    background-color:#272727;
+    color: #FDF7FA;
+    padding:10px 15px 10px 25px;
+    text-align: center;
+}
+
+
+/* Navigation bar style*/
+#navibar{
+    background-color: #272727;
+    width: 20%;
+    margin:auto;
+}
+
+#navibar ul{
+    padding: 0px 0px 10px 25px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#navibar li{
+    display:inline;
+    align-items: center;
+}
+
+#navibar a{
+    color:#FDF7FA;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 30px;
+}
+
+#navibar a:hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+
+/* welcome message */
+#welcome h1{
+    font-size: 40px;
+    margin-left: 30px;
+}
+
+#welcome p{
+    font-size: 30px;
+    line-height: 1.4em;
+}
+
+/* Showcase*/
+#showcase{
+    background-image: url('../images/sag_a.jpg');
+    background-repeat:no-repeat;
+    background-position: top center;
+    height:300px;
+}
+
+#bot-align{
+    height:100%;
+    position:relative;
+}
+
+#showcase-text{
+    font-size: 14px;
+    padding: 0px 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+}
+
+/* Main bio/sidebar area (probably with profile picture)*/
+
+#biography{
+    float:left;
+    width:70%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* profile picture likely here */
+#sidebar{
+    float:right;
+    width:30%;
+    background: #201E1F;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    background-image: url('../images/Headshot-3.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    height:250px;
+}
+
+
+/*------------PROJECT PAGE----------------*/
+.project-box{
+    float:right;
+    width:70%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#cycle-image{
+    float:right;
+    width:30%;
+    background: #201E1F;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    height:300px;
+    background-image: url('../images/all\ bike\ lanes.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+#house-projection-image{
+    float:right;
+    width:30%;
+    background: #201E1F;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    height:300px;
+    background-image: url('../images/starts_forecast.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: left;
+}
+
+#herodotus-image{
+    float:right;
+    width:30%;
+    background: #201E1F;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    height:300px;
+    background-image: url('../images/Herodotus.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: left;
+}
+
+/*------------MEDIA PAGE----------------*/
+.media-box{
+    text-align: left;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.media-box h2{
+    text-align: left;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.media-publisher{
+    text-align: left;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+/* footer style */
+#main-footer{
+    font-size: 14px;
+    background: #272727;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+#footer-content{
+    padding: 0px 0px 10px 25px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+#footer-content li{
+    display:inline;
+    align-items: center;
+}
+
+#footer-content a{
+    color:#808080;
+    text-decoration: none;
+    font-size: 14px;
+    padding-right: 30px;
+}
+
+
+
+/*  QUERIES ----------------------------------------------------
+This 'media query' makes it so the sidebar and main bio stack
+at a certain window thickness */
+@media(max-width:800px){
+    #welcome{
+        width:100%;
+        float:none;
+    }
+
+    #biography{
+        width:100%;
+        float:none;
+    }
+
+    #sidebar{
+        width:100%;
+        float:none;
+    }
+
+    #cycle-image{
+        width:100%;
+        float:inline-start;
+    }
+
+    #house-projection-image{
+        width:100%;
+        float:inline-start;
+    }
+
+    #herodotus-image{
+        width:100%;
+        float:inline-start;
+    }
+
+}
