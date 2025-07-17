@@ -4,30 +4,30 @@
 /* General Link styles*/
 a{
     text-decoration: none;
-    color:#c5f5fd;
+    color:#2466d9;
 }
-a:hover{color:#795f6c;} /*Different states can be affected, such as the color when we hover over links or the active state.*/
+a:hover{color:#634956;} /*Different states can be affected, such as the color when we hover over links or the active state.*/
 /*a:active{color:green;}*/
 
 /* Main body */
 body{
-    background-color:#272727;
-    color:#FDF7FA;
+    background-color:#fafafa;
+    color:#000000;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 1.6em;
+    font-size: 16px;
+    line-height: 1.35em;
     margin: 0;
 }
 
 /* container(s) for most text/image scrolls */
 .container{
-    width:70%;
+    width:90%;
     margin:auto;
     overflow:hidden; /*item just dissapear if they are not in container*/
 }
 
 .container2{
-    width:60%;
+    width:75%;
     margin:auto;
     overflow:hidden;
     border: 3px black;
@@ -52,8 +52,8 @@ body{
 
 /* The main header */
 #main-head{
-    background-color:#272727;
-    color: #FDF7FA;
+    background-color:#fafafa;
+    color: #000000;
     padding:10px 15px 10px 25px;
     text-align: center;
 }
@@ -61,7 +61,7 @@ body{
 
 /* Navigation bar style*/
 #navibar{
-    background-color: #272727;
+    background-color: #fafafa;
     width: 20%;
     margin:auto;
 }
@@ -79,7 +79,7 @@ body{
 }
 
 #navibar a{
-    color:#FDF7FA;
+    color:#000000;
     text-decoration: none;
     font-size: 18px;
     padding-right: 30px;
@@ -128,8 +128,8 @@ body{
 
 #biography{
     float:left;
-    width:70%;
-    padding: 0 30px;
+    width:65%;
+    padding: 20px 20px;
     box-sizing: border-box;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -138,20 +138,26 @@ body{
 /* profile picture likely here */
 #sidebar{
     float:right;
-    width:30%;
-    background: #201E1F;
-    padding: 10px;
+    width:35%;
+    background: #fafafa;
+    padding: 5px;
     box-sizing: border-box;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 30px;
     color: white;
-    background-image: url('../images/Headshot-3.jpg');
+    /*background-image: url('../images/Headshot-3.jpg'); */
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center;
-    height:250px;
+    height:280px;
 }
 
+.sidebar-image {
+    width: 300px;         /* fixed width */
+    height: auto;         /* keeps aspect ratio */
+    object-fit: cover;    /* optional: for cropping */
+    display: block;       /* remove weird gaps */
+  }
 
 /*------------PROJECT PAGE----------------*/
 .project-box{
@@ -222,8 +228,8 @@ body{
 .media-box h2{
     text-align: left;
     box-sizing: border-box;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .media-publisher{
@@ -238,8 +244,8 @@ body{
 /* footer style */
 #main-footer{
     font-size: 14px;
-    background: #272727;
-    color: white;
+    background: #fafafa;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px;
     margin-top: 50px;
