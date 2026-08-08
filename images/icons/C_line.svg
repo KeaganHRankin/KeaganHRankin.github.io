@@ -1,0 +1,43 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!--
+    Used as the site favicon and, inlined, as the header wordmark.
+
+    The stroke colour is theme-aware: browsers apply prefers-color-scheme to
+    SVG favicons, so the mark stays visible against both a light and a dark
+    browser tab. The previous hard-coded #20303a vanished on dark tabs.
+  -->
+  <style>
+    :root { --ink: #20303a; }
+    @media (prefers-color-scheme: dark) { :root { --ink: #c3d3dc; } }
+    .ink { stroke: var(--ink); }
+    .ink-fill { fill: var(--ink); }
+  </style>
+
+  <g class="ink" fill="none" stroke-width="16" stroke-linejoin="round" stroke-linecap="round">
+    <!-- hood -->
+    <path d="M256 70
+             c-92 0 -146 56 -146 128
+             c0 70 58 116 146 116
+             c88 0 146 -46 146 -116
+             c0 -72 -54 -128 -146 -128 Z"/>
+    <!-- body -->
+    <path d="M168 300 q-16 6 -16 44 v96 q0 20 22 20 h164 q22 0 22 -20 v-96 q0 -38 -16 -44"/>
+    <!-- legs -->
+    <path d="M210 460 v34 M302 460 v34"/>
+    <!-- nose -->
+    <path d="M246 208 q-10 32 -17 44 q20 10 48 8 q-12 -22 -17 -54"/>
+  </g>
+
+  <!-- eyes (filled dots) -->
+  <circle class="ink" cx="200" cy="180" r="24" fill="none" stroke-width="16"/>
+  <circle class="ink-fill" cx="200" cy="180" r="6"/>
+  <circle class="ink" cx="312" cy="174" r="26" fill="none" stroke-width="16"/>
+  <circle class="ink-fill" cx="312" cy="174" r="7"/>
+
+  <!-- open mouth -->
+  <ellipse class="ink-fill" cx="256" cy="292" rx="50" ry="26"/>
+
+  <!-- little figure -->
+  <path class="ink" d="M249 316 q-3 24 6 40 q12 7 17 -5 q5 -20 0 -38"
+        fill="none" stroke-width="13" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

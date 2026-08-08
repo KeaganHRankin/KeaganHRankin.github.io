@@ -1,0 +1,22 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="">
+  <!-- Placeholder: cities scattered against a carbon-budget ceiling.
+       Replace with a real figure crop (see images/papers/README.md). -->
+  <g opacity="0.5">
+    <g fill="#8f8d86">
+      <circle cx="62"  cy="196" r="5"/>
+      <circle cx="96"  cy="164" r="8"/>
+      <circle cx="128" cy="212" r="4"/>
+      <circle cx="158" cy="150" r="10"/>
+      <circle cx="190" cy="188" r="6"/>
+      <circle cx="214" cy="132" r="7"/>
+      <circle cx="248" cy="176" r="9"/>
+      <circle cx="278" cy="206" r="5"/>
+      <circle cx="306" cy="144" r="6"/>
+      <circle cx="336" cy="184" r="8"/>
+    </g>
+    <path d="M48 108h304" fill="none" stroke="#8f8d86" stroke-width="4"
+          stroke-dasharray="10 8" stroke-linecap="round"/>
+    <path d="M48 240h304" fill="none" stroke="#8f8d86" stroke-width="3"
+          stroke-linecap="round" opacity="0.7"/>
+  </g>
+</svg>

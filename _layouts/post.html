@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<article class="wrap">
+
+  <header class="post-header">
+    <h1>{{ page.title }}</h1>
+
+    {% if page.subtitle %}
+      <p class="post-header__subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+
+    <div class="post-header__meta meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%-d %B %Y" }}
+      </time>
+      {%- assign words = content | number_of_words -%}
+      {%- if words > 120 -%}
+        <span class="dot" aria-hidden="true">&middot;</span>
+        <span>{{ words | divided_by: 220 | plus: 1 }} min read</span>
+      {%- endif -%}
+    </div>
+  </header>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <a href="/writing/">&larr; All writing</a>
+    <a href="mailto:{{ site.social.email }}?subject={{ page.title | uri_escape }}">Reply by email</a>
+  </footer>
+
+</article>
+
+{%- comment -%}
+  Math is opt-in per post via `math: true` in the front matter, so pages that
+  do not need equations load nothing at all.
+{%- endcomment -%}
+{% if page.math %}
+  {%- comment -%}
+    Only \( \) and \[ \] are registered as delimiters. Write $$...$$ in the
+    Markdown: kramdown rewrites inline $$ to \( \) and block $$ to \[ \], so
+    MathJax never needs to see a dollar sign. Registering '$' would be actively
+    harmful — it would turn a sentence about $25,000 in funding into math.
+  {%- endcomment -%}
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}

@@ -1,0 +1,43 @@
+---
+layout: page
+title: Writing
+intro: >-
+  Notes and essays, mostly on materials, cities, models and the odd tangent
+  into history.
+description: Essays and notes by Keagan Hudson Rankin.
+# Unlinked from the nav, so keep it out of sitemap.xml too. Remove this line
+# when reviving the blog (see the note in index.html).
+sitemap: false
+---
+
+{% if site.posts.size > 0 %}
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <p class="meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%-d %B %Y" }}
+          </time>
+        </p>
+
+        <h2 class="post-list__title">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+
+        <p class="post-list__excerpt">
+          {%- if post.subtitle -%}
+            {{ post.subtitle }}
+          {%- else -%}
+            {{ post.excerpt | strip_html | truncate: 200 }}
+          {%- endif -%}
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="page-footnote">
+    Subscribe via <a href="/feed.xml">RSS</a>.
+  </p>
+{% else %}
+  <p class="empty-note">Nothing published yet. Check back soon.</p>
+{% endif %}

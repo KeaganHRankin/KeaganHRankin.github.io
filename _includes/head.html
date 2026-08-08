@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fdfdfb">
+
+{%- comment -%}
+  Set the theme before first paint so a dark-mode reader never sees a white
+  flash. No stored choice means no data-theme attribute at all, which lets the
+  CSS prefers-color-scheme block take over.
+{%- endcomment -%}
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || t === 'light') {
+        document.documentElement.setAttribute('data-theme', t);
+        document.querySelector('meta[name="theme-color"]')
+          .setAttribute('content', t === 'dark' ? '#16171a' : '#fdfdfb');
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector('meta[name="theme-color"]')
+          .setAttribute('content', '#16171a');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+{%- comment -%}
+  Favicon. The file is C_line_512.png with a capital C — GitHub Pages is
+  case-sensitive. The SVG comes first because it stays crisp at 16px, where a
+  downscaled 512px PNG goes soft; the PNG is the fallback.
+{%- endcomment -%}
+<link rel="icon" href="/images/icons/C_line.svg" type="image/svg+xml">
+<link rel="icon" href="/images/icons/C_line_512.png" sizes="512x512" type="image/png">
+<link rel="apple-touch-icon" href="/images/icons/C_line_512.png">
+
+{%- comment -%}
+  main.css, deliberately NOT style.css: jekyll-theme-primer (a github-pages gem
+  dependency) ships assets/css/style.scss, which compiles to the same output
+  path and can clobber a plain assets/css/style.css. Keep this filename.
+{%- endcomment -%}
+<link rel="stylesheet" href="/assets/css/main.css">
+
+{%- comment -%}
+  jekyll-seo-tag handles <title>, description, canonical, OG and Twitter cards.
+  Do not add a hand-written <link rel="canonical"> here — it would duplicate the
+  one seo-tag emits.
+{%- endcomment -%}
+{% seo %}
+{% feed_meta %}

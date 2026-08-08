@@ -1,0 +1,17 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="">
+  <!-- Placeholder: a pull-based supply chain as linked nodes.
+       Replace with a real figure crop (see images/papers/README.md). -->
+  <g opacity="0.55">
+    <g fill="none" stroke="#8f8d86" stroke-width="4" stroke-linecap="round">
+      <path d="M104 150h56M216 118h48M216 186h48"/>
+    </g>
+    <g fill="none" stroke="#8f8d86" stroke-width="4">
+      <rect x="52"  y="126" width="52" height="48" rx="5"/>
+      <rect x="160" y="126" width="56" height="48" rx="5"/>
+      <rect x="264" y="94"  width="52" height="48" rx="5"/>
+      <rect x="264" y="162" width="52" height="48" rx="5"/>
+    </g>
+    <path d="M170 138h36M170 150h36M170 162h24" fill="none" stroke="#8f8d86"
+          stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  </g>
+</svg>

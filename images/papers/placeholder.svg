@@ -1,0 +1,13 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="">
+  <!--
+    Neutral fallback thumbnail, used when a papers.yml entry has no `thumb`.
+    Background is transparent and the ink is a mid warm-grey, so it reads
+    correctly on both the light and dark surface colours without needing to
+    track the site's theme toggle.
+  -->
+  <g fill="none" stroke="#8f8d86" stroke-width="4" stroke-linecap="round" opacity="0.55">
+    <rect x="118" y="88" width="164" height="124" rx="6"/>
+    <path d="M118 176l44-38 32 26 40-46 48 42"/>
+  </g>
+  <circle cx="243" cy="119" r="10" fill="#8f8d86" opacity="0.4"/>
+</svg>

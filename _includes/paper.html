@@ -1,0 +1,74 @@
+{%- comment -%}
+  Renders one entry from _data/papers.yml.
+
+  Usage:  {% include paper.html paper=paper %}
+
+  Fields:  title, authors, venue, year, type
+           doi, pdf, code, data, slides   (optional link targets)
+           note                           (award / policy-impact line)
+           links: [{label, url}]          (press or anything else)
+           thumb                          (falls back to a placeholder, so the
+                                           page can never show a broken image)
+
+  Liquid `assign` writes to global scope, so the local alias is deliberately
+  named `pub` rather than `paper` — assigning `paper` here would shadow the
+  caller's loop variable.
+
+  alt="" is deliberate: the thumbnail carries no information the adjacent title
+  does not already give a screen reader.
+{%- endcomment -%}
+
+{%- assign pub = include.paper -%}
+
+<div class="paper">
+
+  <div class="paper__thumb-wrap">
+    <img class="paper__thumb"
+         src="{{ pub.thumb | default: '/images/papers/placeholder.svg' }}"
+         alt="" loading="lazy" decoding="async" width="300" height="225">
+  </div>
+
+  <div class="paper__body">
+    <h3 class="paper__title">
+      {%- assign pub_href = pub.doi | default: pub.pdf | default: pub.code -%}
+      {%- if pub_href -%}
+        <a href="{{ pub_href }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+      {%- else -%}
+        {{ pub.title }}
+      {%- endif -%}
+    </h3>
+
+    {% if pub.authors %}
+      <p class="paper__authors">
+        {{- pub.authors | replace: 'K H Rankin', '<strong>K H Rankin</strong>' -}}
+      </p>
+    {% endif %}
+
+    {% if pub.venue %}
+      <p class="paper__venue">{{ pub.venue }}</p>
+    {% endif %}
+
+    {% if pub.note %}
+      <p class="paper__note">{{ pub.note }}</p>
+    {% endif %}
+
+    {%- assign pub_chips = false -%}
+    {%- if pub.doi or pub.pdf or pub.code or pub.data or pub.slides or pub.links -%}
+      {%- assign pub_chips = true -%}
+    {%- endif -%}
+
+    {% if pub_chips %}
+      <ul class="chips">
+        {% if pub.doi %}<li><a class="chip" href="{{ pub.doi }}" target="_blank" rel="noopener">DOI</a></li>{% endif %}
+        {% if pub.pdf %}<li><a class="chip" href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a></li>{% endif %}
+        {% if pub.code %}<li><a class="chip" href="{{ pub.code }}" target="_blank" rel="noopener">Code</a></li>{% endif %}
+        {% if pub.data %}<li><a class="chip" href="{{ pub.data }}" target="_blank" rel="noopener">Data</a></li>{% endif %}
+        {% if pub.slides %}<li><a class="chip" href="{{ pub.slides }}" target="_blank" rel="noopener">Slides</a></li>{% endif %}
+        {% for link in pub.links %}
+          <li><a class="chip" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
+</div>

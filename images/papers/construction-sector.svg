@@ -1,0 +1,16 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="">
+  <!-- Placeholder: top-down sectoral emissions, stacked.
+       Replace with a real figure crop (see images/papers/README.md). -->
+  <g fill="#8f8d86" opacity="0.5">
+    <rect x="72"  y="164" width="42" height="76" rx="3"/>
+    <rect x="72"  y="132" width="42" height="26" rx="3" opacity="0.6"/>
+    <rect x="136" y="140" width="42" height="100" rx="3"/>
+    <rect x="136" y="100" width="42" height="34" rx="3" opacity="0.6"/>
+    <rect x="200" y="180" width="42" height="60" rx="3"/>
+    <rect x="200" y="152" width="42" height="22" rx="3" opacity="0.6"/>
+    <rect x="264" y="118" width="42" height="122" rx="3"/>
+    <rect x="264" y="76"  width="42" height="36" rx="3" opacity="0.6"/>
+  </g>
+  <path d="M52 248h300" fill="none" stroke="#8f8d86" stroke-width="3"
+        stroke-linecap="round" opacity="0.4"/>
+</svg>

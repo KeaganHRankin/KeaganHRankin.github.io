@@ -1,0 +1,109 @@
+---
+layout: page
+title: Papers
+body_class: is-wide
+intro: >-
+  Selected publications on the material demands of cities and infrastructure,
+  plus invited talks and press coverage.
+description: Selected publications, talks and press by Keagan Hudson Rankin.
+---
+
+{%- comment -%}
+  Group first, then sort the groups by year descending.
+
+  NOT `sort: "year" | reverse` on the flat list: that also reverses the order of
+  papers *within* each year, burying whichever paper is listed first in
+  papers.yml. group_by preserves each group's input order, so the curated order
+  inside a year survives. Sorting group names as strings is safe for 4-digit
+  years.
+{%- endcomment -%}
+
+{%- assign journal = site.data.papers | where: "type", "journal" -%}
+{%- assign conference = site.data.papers | where: "type", "conference" -%}
+
+{% if journal.size > 0 %}
+  <section class="paper-section">
+    <div class="section-head"><h2>Journal papers</h2></div>
+
+    {% assign journal_years = journal | group_by: "year" | sort: "name" | reverse %}
+    {% for group in journal_years %}
+      <div class="year-group">
+        <p class="year-label">{{ group.name }}</p>
+        {% for paper in group.items %}
+          {% include paper.html paper=paper %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+{% endif %}
+
+
+{% if conference.size > 0 %}
+  <section class="paper-section">
+    <div class="section-head"><h2>Conference papers</h2></div>
+
+    {% assign conference_years = conference | group_by: "year" | sort: "name" | reverse %}
+    {% for group in conference_years %}
+      <div class="year-group">
+        <p class="year-label">{{ group.name }}</p>
+        {% for paper in group.items %}
+          {% include paper.html paper=paper %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+{% endif %}
+
+
+{% if site.data.talks.size > 0 %}
+  <section class="paper-section">
+    <div class="section-head"><h2>Invited talks</h2></div>
+
+    <ul class="entry-list">
+      {% for talk in site.data.talks %}
+        <li>
+          <h3 class="entry__title">
+            {%- if talk.url -%}
+              <a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.title }}</a>
+            {%- else -%}
+              {{ talk.title }}
+            {%- endif -%}
+          </h3>
+          <p class="entry__where">
+            <em>{{ talk.venue }}</em>{% if talk.where %}, {{ talk.where }}{% endif %}{% if talk.year %}, {{ talk.year }}{% endif %}
+          </p>
+          {% if talk.recording %}
+            <ul class="chips">
+              <li><a class="chip" href="{{ talk.recording }}" target="_blank" rel="noopener">Recording</a></li>
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
+
+
+{% if site.data.press.size > 0 %}
+  <section class="paper-section">
+    <div class="section-head"><h2>Press</h2></div>
+
+    <ul class="entry-list">
+      {% for item in site.data.press %}
+        <li>
+          <h3 class="entry__title">
+            <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+          </h3>
+          <p class="entry__where"><em>{{ item.outlet }}</em>, {{ item.year }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
+
+
+<p class="page-footnote">
+  A full list of awards, teaching and service is in my
+  <a href="{{ site.cv_url }}" target="_blank" rel="noopener">CV</a>. See also my
+  <a href="{{ site.social.scholar | escape }}" target="_blank" rel="noopener">Google Scholar profile</a>.
+</p>

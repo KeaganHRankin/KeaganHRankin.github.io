@@ -1,0 +1,86 @@
+# Site settings for keaganhrankin.github.io
+# This is a GitHub "user site" served from the domain root, so baseurl stays
+# empty and every asset path in the templates is root-absolute (/images/...).
+#
+# GitHub Pages builds this with Jekyll 3.10 in safe mode: only whitelisted
+# plugins run, and there is no Sass step (assets/css/main.css is plain CSS,
+# copied verbatim because it has no YAML front matter). Keep it that way.
+#
+# The stylesheet is main.css, not style.css, on purpose — see _includes/head.html.
+
+title: Keagan Hudson Rankin
+tagline: Materials, cities, and climate limits
+description: >-
+  PhD student and Vanier Scholar at University of Toronto Engineering,
+  researching the material demands of cities and infrastructure systems.
+url: "https://keaganhrankin.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: Keagan Hudson Rankin
+  email: keagan.rankin@mail.utoronto.ca
+
+# Where to find me, rendered by _includes/footer.html
+social:
+  email: keagan.rankin@mail.utoronto.ca
+  github: https://github.com/KeaganHRankin
+  linkedin: https://www.linkedin.com/in/keagan-rankin-8b3601211/
+  scholar: https://scholar.google.ca/citations?user=2UaBLQYAAAAJ&hl=en
+
+# The current CV. Update this one line when a new version lands in files/.
+cv_url: /files/khr_cv_short_02_2026.pdf
+research_group: https://sustainablesystems.civmin.utoronto.ca/
+
+# Posts live at /writing/<slug>/
+permalink: /writing/:title/
+
+# GitHub Pages applies jekyll-theme-primer as the DEFAULT theme when a site
+# specifies none. That theme ships assets/css/style.scss, which compiles to
+# assets/css/style.css and collided with the hand-written stylesheet — which of
+# the two won was nondeterministic. This site uses none of Primer's layouts,
+# includes or Sass, so switch the theme off entirely.
+theme:
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  footnote_backlink: "&#8617;"
+  # nil, not the kramdown default of "mathjax": the default wraps $$ blocks in
+  # <script type="math/tex">, which is MathJax 2 syntax that MathJax 3 ignores.
+  # With nil, kramdown still recognises the math block (so markdown does not
+  # mangle underscores inside it) but emits it verbatim for MathJax 3 to find.
+  math_engine: nil
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: /feed.xml
+
+# Only posts get a default layout. Deliberately NOT a site-wide default:
+# a `scope: {path: ""}` default layout also catches the XML that jekyll-feed
+# and jekyll-sitemap generate and wraps it in HTML. Every page here declares
+# its own layout in front matter.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .jekyll-cache
+  - "files/*.docx"
+  # Repo documentation, not a web page. GitHub Pages silently enables
+  # jekyll-optional-front-matter and jekyll-readme-index, which would otherwise
+  # publish this as /images/papers/.
+  - images/papers/README.md

@@ -1,140 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        ul li {
-          margin-bottom: 10px; /* Adjust to your liking */
-        }
-      </style>
+---
+layout: home
+title: Keagan Hudson Rankin
+body_class: is-home
+description: >-
+  PhD student and Vanier Scholar at University of Toronto Engineering,
+  researching the material demands of cities and infrastructure systems.
+---
 
-    <title>Keagan Rankin - Home</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
+<section class="hero">
+  <div class="hero__intro">
+    <h1 class="hero__name">Keagan Hudson Rankin</h1>
+    <p class="hero__tagline">PhD student &amp; Vanier Scholar &middot; University of Toronto Engineering</p>
+  </div>
 
+  <div class="hero__portrait-wrap">
+    <img class="hero__portrait"
+         src="/images/informal_headshot.JPG"
+         alt="Keagan Rankin"
+         width="1377" height="1608"
+         fetchpriority="high" decoding="async">
+  </div>
+</section>
 
-<body>
-    <!-- The main header for the website-->
-    <header id="main-head">
-        <div class="container"></div>
-            <h1>Keagan Hudson Rankin</h1>
-    </header>
+<dl class="factlist">
+  <dt>CV</dt>
+  <dd><a href="{{ site.cv_url }}" target="_blank" rel="noopener">khr_cv_short_02_2026.pdf</a></dd>
 
-    <!-- The navigation bar-->
-    <!--<nav id="navibar">
-        <div class="container"></div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="media/index.html">Publications</a></li>
-                <li><a href="projects/index.html">Images</a></li>
-                <li><a href="contact/index.html">Contact</a></li>
-            </ul>
-    </nav>-->
+  <dt>Email</dt>
+  <dd><a href="mailto:{{ site.social.email }}">{{ site.social.email }}</a></dd>
 
-    <!-- Welcome message welcomes people to the site perhaps (maybe just bio here isntead of about)-->
-    <div class="container2">
-        <section id="biography">
-            <h2>Research</h2>
-            <p>
-                I am a PhD student and Vanier Scholar at University of Toronto Engineering. My research 
-                (supervised by <a href="https://civmin.utoronto.ca/home/about-us/directory/professors/shoshanna-saxe/" target="_blank"> Shoshanna Saxe </a>
-                and <a href="https://civmin.utoronto.ca/home/about-us/directory/professors/daniel-posen/" target="_blank"> Daniel Posen</a>) 
-                investigates the material demands of cities and infrastructure systems. 
-                I am determining the amount of materials we need, how demand for materials effects our energy systems,
-                and how we can meet material demands without overstepping climate limits. I'm also interested epistemic questions regarding how we build, use 
-                and interpret models (e.g. machine learning) in applied science.
-                Some examples of my research:
-                
-                <ul>
-                    <li><a href="https://doi.org/10.1021/acs.est.4c02070" target="_blank">The Future Infrastructure Growth (FIG) model</a>, a simulation tool we created that won a 
-                   <a href=https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/funding-programs/all-funding-programs/housing-research-awardsnational  target="_blank">national research award</a> from the Canadian Government.</li>
-
-                    <li><a href="https://doi.org/10.1111/jiec.13461" target="_blank">A dataset</a> we built using LCA and BIM tools to determine why some types of housing have lower material GHG emissions than others. This work helped inform changes to Toronto's 
-                        <a href= https://www.toronto.ca/city-government/planning-development/planning-studies-initiatives/expanding-housing-options/ target="_blank"> housing policy</a>.</li>
-                  </ul>
-                
-                
-                I recently returned from a visting position at the <a href="https://www-csd.eng.cam.ac.uk/" target="_blank"> University of Cambridge</a>, where I was leading
-                a <a href="https://doi.org/10.1038/s44284-025-00379-8" target="_blank">project</a> to determine the carbon budgets of thousands of cities across the world. I completed my BSc in Engineering at the University of New Brunswick in my hometown of Fredericton, NB. 
-            </p>
-
-            <h2>Personal Stuff</h2>
-            <p>
-                Here are some other things I enjoy:
-                <ul>
-                    <li>I try to read non-PhD related material when I get the chance (i.e. rarely). Here are some books I am currently part way through or recently finished:
-                        <br><i> Imperial Twilight: The Opium War and the End of China's Last Golden Age</i> - Steven Platt
-                        <br><i> One Hundred Years of Solitude</i> - Gabriel Garcia Marquez
-                        <br><i> Game Wizards: The Epic Battle for Dungeons & Dragons</i> - Jon Peterson
-                    </li>
-                    <li>I lived in and have sat on the board of directors for CCRI, Canada's oldest housing cooperative. We're a democratic entity that 
-                        provides housing to >200 students in downtown Toronto at well below market rate.</li>
-                    <li>I was a lightweight rower in a past life. I picked up the sport again while in Cambridge, and I am trying to regain my former speed.
-                        <!--Some of my rowing achievements include:-->
-                        <!--<br> -Competing at the 2017 Canada Games in the lwt M4-, -->
-                        <!--<br> -3x Atlantic Canadian university championship titles, including the overall club title in 2019.-->
-                        <!--<br> -Blades + 3rd on river in the 2025 Cambridge Lent bumps, rowing bow in Clare College's M1.-->
-                        <br>My last 2k was: <i>6:54</i> in <i>Jan 2025</i>.
-                        <br>My current goal: maintaining and <br>sub <i>7</i> by <i>Fall 2026</i>.
-                    </li>
-
-                    <!--<li>Side Project(s):
-                        I took an class on computational statistics while in Cambridge, where I learned about advanced Monte Carlo methods,
-                        Lebesgue integrals, and some measure theory. I'm attempting implement these ideas for geospatial
-                        prediction of food consumption impacts. I'm using an LLM workflow to speed up implementation in Python or R.
-                    </li>-->
-                </ul>
-
-                <!-- add pictures here!-->
-            </p>
+  <dt>Group</dt>
+  <dd><a href="{{ site.research_group }}" target="_blank" rel="noopener">Sustainable Systems, U of T CivMin</a></dd>
+</dl>
 
 
-        </section>
-        <aside id="sidebar">
-            <img src="images/Headshot-3.jpg" alt="Keagan Rankin" class="sidebar-image">
-        </aside>
+{%- comment -%}
+  The Research and Personal Stuff copy below is preserved verbatim from the
+  previous site. Only the markup around it changed: the <ul>s are no longer
+  nested inside <p>s (which was invalid and forced an inline <style> override).
+{%- endcomment -%}
 
-        My CV: <a href="files/khr_cv_short_02_2026.pdf" target="_blank"><u>here</u> <br></a>
-        Our research group: <a href="https://sustainablesystems.civmin.utoronto.ca/" target="_blank"><u>here</u></a>
-        <br>Email: <a href="mailto:keagan.rankin@mail.utoronto.ca" target="_blank"><u>keagan.rankin@mail.utoronto.ca</u></a>
-        <br>See links to my socials at the bottom of the webpage.
+<section class="home-section" id="research">
+  <div class="section-head">
+    <h2>Research</h2>
+  </div>
+
+  <div class="prose home-prose">
+    <p>
+      I am a PhD student and Vanier Scholar at University of Toronto Engineering. My research
+      (supervised by <a href="https://civmin.utoronto.ca/home/about-us/directory/professors/shoshanna-saxe/" target="_blank" rel="noopener">Shoshanna Saxe</a>
+      and <a href="https://civmin.utoronto.ca/home/about-us/directory/professors/daniel-posen/" target="_blank" rel="noopener">Daniel Posen</a>)
+      investigates the material demands of cities and infrastructure systems.
+      I am determining the amount of materials we need, how demand for materials effects our energy systems,
+      and how we can meet material demands without overstepping climate limits. I'm also interested epistemic questions regarding how we build, use
+      and interpret models (e.g. machine learning) in applied science.
+      Some examples of my research:
+    </p>
+
+    <ul>
+      <li><a href="https://doi.org/10.1021/acs.est.4c02070" target="_blank" rel="noopener">The Future Infrastructure Growth (FIG) model</a>, a simulation tool we created that won a
+        <a href="https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/funding-programs/all-funding-programs/housing-research-awardsnational" target="_blank" rel="noopener">national research award</a> from the Canadian Government.</li>
+
+      <li><a href="https://doi.org/10.1111/jiec.13461" target="_blank" rel="noopener">A dataset</a> we built using LCA and BIM tools to determine why some types of housing have lower material GHG emissions than others. This work helped inform changes to Toronto's
+        <a href="https://www.toronto.ca/city-government/planning-development/planning-studies-initiatives/expanding-housing-options/" target="_blank" rel="noopener">housing policy</a>.</li>
+    </ul>
+
+    <p>
+      I recently returned from a visting position at the <a href="https://www-csd.eng.cam.ac.uk/" target="_blank" rel="noopener">University of Cambridge</a>, where I was leading
+      a <a href="https://doi.org/10.1038/s44284-025-00379-8" target="_blank" rel="noopener">project</a> to determine the carbon budgets of thousands of cities across the world. I completed my BSc in Engineering at the University of New Brunswick in my hometown of Fredericton, NB.
+    </p>
+  </div>
+</section>
+
+
+<section class="home-section" id="personal">
+  <div class="section-head">
+    <h2>Personal Stuff</h2>
+  </div>
+
+  <div class="prose home-prose">
+    <p>Here are some other things I enjoy:</p>
+
+    <ul>
+      <li>I try to read non-PhD related material when I get the chance (i.e. rarely). Here are some books I am currently part way through or recently finished:
+        <br><i> Imperial Twilight: The Opium War and the End of China's Last Golden Age</i> - Steven Platt
+        <br><i> One Hundred Years of Solitude</i> - Gabriel Garcia Marquez
+        <br><i> Game Wizards: The Epic Battle for Dungeons &amp; Dragons</i> - Jon Peterson
+      </li>
+      <li>I lived in and have sat on the board of directors for CCRI, Canada's oldest housing cooperative. We're a democratic entity that
+        provides housing to &gt;200 students in downtown Toronto at well below market rate.</li>
+      <li>I was a lightweight rower in a past life. I picked up the sport again while in Cambridge, and I am trying to regain my former speed.
+        <!--Some of my rowing achievements include:-->
+        <!--<br> -Competing at the 2017 Canada Games in the lwt M4-, -->
+        <!--<br> -3x Atlantic Canadian university championship titles, including the overall club title in 2019.-->
+        <!--<br> -Blades + 3rd on river in the 2025 Cambridge Lent bumps, rowing bow in Clare College's M1.-->
+        <br>My last 2k was: <i>6:54</i> in <i>Jan 2025</i>.
+        <br>My current goal: maintaining and <br>sub <i>7</i> by <i>Fall 2026</i>.
+      </li>
+
+      <!--<li>Side Project(s):
+        I took an class on computational statistics while in Cambridge, where I learned about advanced Monte Carlo methods,
+        Lebesgue integrals, and some measure theory. I'm attempting implement these ideas for geospatial
+        prediction of food consumption impacts. I'm using an LLM workflow to speed up implementation in Python or R.
+      </li>-->
+    </ul>
+  </div>
+</section>
+
+
+{%- comment -%}
+  Three newest papers from _data/papers.yml. Grouped by year and sorted
+  descending rather than flat-sorted, so the curated order within a year is
+  preserved (see the note in papers/index.html). Liquid's `break` only escapes
+  the inner loop, hence the counter.
+{%- endcomment -%}
+{%- assign paper_years = site.data.papers | group_by: "year" | sort: "name" | reverse -%}
+{% if site.data.papers.size > 0 %}
+  <section class="home-section">
+    <div class="section-head">
+      <h2>Selected papers</h2>
+      <a href="/papers/">All papers &amp; talks &rarr;</a>
     </div>
 
-    <!-- Homepage showcase (eventually want autoscrolling images/links)-->
-    <!--<div class="container2">
-        <section id="showcase">
-            <div id="bot-align">
-                <h1 id="showcase-text">
-                    This is my showcase, eventually images will go here.
-                </h1>
-            </div>
-        </section>
-    </div> -->
+    <ul class="entry-list">
+      {%- assign shown = 0 -%}
+      {% for group in paper_years %}
+        {% for paper in group.items %}
+          {% if shown < 3 %}
+            <li>
+              <h3 class="entry__title">
+                {%- assign href = paper.doi | default: paper.pdf | default: paper.code -%}
+                {%- if href -%}
+                  <a href="{{ href }}" target="_blank" rel="noopener">{{ paper.title }}</a>
+                {%- else -%}
+                  {{ paper.title }}
+                {%- endif -%}
+              </h3>
+              <p class="entry__where"><em>{{ paper.venue }}</em>, {{ paper.year }}</p>
+            </li>
+            {%- assign shown = shown | plus: 1 -%}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
 
 
-    <!-- Footer with copyright and such.-->
-    <footer id="main-footer">
-        <p>Made by Keagan Rankin &copy; 2025 </p>
-        <p>Last Updated: April 2025</p>
-        <ul id="footer-content">
-            <li><a href="https://www.linkedin.com/in/keagan-rankin-8b3601211/" target="_blank">
-                <img src="images/icons/linkedin.png" > <!-- <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Freepik - Flaticon</a> -->
-            </a></li>
-            <li><a href="https://github.com/KeaganHRankin" target="_blank">
-                <img src="images/icons/github.png">
-            </a></li>
-            <li><a href="https://scholar.google.ca/citations?user=2UaBLQYAAAAJ&hl=en" target="_blank">
-                <img src="images/icons/google-scholar--v2_small.png">
-            </a></li>
-            <!-- ADD GOOGLE SCHOLAR -->
-            <!-- <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Pixel perfect - Flaticon</a> -->
-            <!--<li><a href="https://medium.com/@keagan.rankin">Medium</a></li>-->
-        </ul>
-    </footer>
+{%- comment -%}
+  "Recent writing" is disabled to match the hidden Writing tab in
+  _includes/nav.html — otherwise publishing a post would make this block appear
+  and link to a page with no nav entry.
 
+  TO REVIVE THE BLOG, do all three:
+    1. uncomment the Writing <a> in _includes/nav.html
+    2. uncomment the block below
+    3. remove `sitemap: false` from writing/index.html
 
+  The blog itself is untouched and still builds at /writing/.
 
-</body>
-</html>
+  {% if site.posts.size > 0 %}
+    <section class="home-section">
+      <div class="section-head">
+        <h2>Recent writing</h2>
+        <a href="/writing/">All writing &rarr;</a>
+      </div>
+
+      <ul class="entry-list">
+        {% for post in site.posts limit: 3 %}
+          <li>
+            <p class="meta">{{ post.date | date: "%-d %B %Y" }}</p>
+            <h3 class="entry__title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            {% if post.subtitle %}
+              <p class="entry__where">{{ post.subtitle }}</p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+{%- endcomment -%}

@@ -1,0 +1,17 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="">
+  <!-- Placeholder: historical trend with a forecast fan to 2030.
+       Replace with a real figure crop (see images/papers/README.md). -->
+  <g opacity="0.5">
+    <!-- forecast fan -->
+    <path d="M212 168 L352 96 L352 216 Z" fill="#8f8d86" opacity="0.28"/>
+    <!-- history -->
+    <path d="M56 204 l30 -14 28 18 30 -26 34 12 34 -26"
+          fill="none" stroke="#8f8d86" stroke-width="4.5" stroke-linecap="round"
+          stroke-linejoin="round"/>
+    <!-- central forecast -->
+    <path d="M212 168 L352 140" fill="none" stroke="#8f8d86" stroke-width="4"
+          stroke-dasharray="9 7" stroke-linecap="round"/>
+    <path d="M52 248h300M52 248V72" fill="none" stroke="#8f8d86" stroke-width="3"
+          stroke-linecap="round" opacity="0.55"/>
+  </g>
+</svg>

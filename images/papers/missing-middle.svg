@@ -1,0 +1,16 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="">
+  <!-- Placeholder: three residential forms of increasing density.
+       Replace with a real figure crop (see images/papers/README.md). -->
+  <g fill="none" stroke="#8f8d86" stroke-width="4" stroke-linejoin="round" opacity="0.55">
+    <!-- single family -->
+    <path d="M56 226v-46l30-24 30 24v46z"/>
+    <!-- missing middle -->
+    <path d="M156 226v-76l44-26 44 26v76z"/>
+    <path d="M156 182h88"/>
+    <!-- mid-rise -->
+    <path d="M284 226v-108h60v108z"/>
+    <path d="M284 154h60M284 190h60"/>
+  </g>
+  <path d="M40 240h320" fill="none" stroke="#8f8d86" stroke-width="3"
+        stroke-linecap="round" opacity="0.4"/>
+</svg>

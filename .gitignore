@@ -1,0 +1,11 @@
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+vendor/
+.sass-cache/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini

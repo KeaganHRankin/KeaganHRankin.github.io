@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {% include head.html %}
+</head>
+
+{%- comment -%}
+  --measure is set on <body> so the header, main content and footer all share
+  one left edge. Pages widen the column with `body_class: is-wide` (or is-home).
+{%- endcomment -%}
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  {% include nav.html %}
+
+  <main id="content">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="/assets/js/theme.js"></script>
+</body>
+</html>

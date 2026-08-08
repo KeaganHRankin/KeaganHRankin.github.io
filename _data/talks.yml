@@ -1,0 +1,24 @@
+# Invited talks, newest first. Rendered on /papers/.
+#
+# Fields: title, venue, where, year, url (optional — links the title),
+#         recording (optional — adds a "Recording" chip)
+
+- title: "Scenario modelling of urban metabolism: recent progress and research trends"
+  venue: "ISIE-SEM Perpetual Conference"
+  year: 2024
+
+- title: "Building more housing with less embodied greenhouse gas"
+  venue: "School of Cities Embodied Emissions Symposium"
+  where: "Toronto, Ontario"
+  year: 2024
+  recording: "https://csbe.civmin.utoronto.ca/research/embodied-ghg-symposium/"
+
+- title: "Carbon capture's make or break role in climate-change mitigation"
+  venue: "Massey College Junior Fellow Lecture Series"
+  where: "Toronto, Ontario"
+  year: 2024
+
+- title: "Providing more housing with less embodied greenhouse gas"
+  venue: "U of T Engineering Research Council Annual Conference"
+  where: "Toronto, Ontario"
+  year: 2023
