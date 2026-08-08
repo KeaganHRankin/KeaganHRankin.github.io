@@ -530,10 +530,15 @@ sup[role="doc-noteref"] a, a.footnote { text-decoration: none; font-weight: 600;
   margin-bottom: 0.4rem;
 }
 
+/* A palette token rather than a literal colour, so the line stays readable when
+   the dark theme flips the palette. --text-soft sits one step below the --text
+   used by .paper__note, keeping the tagline subordinate to the h1 above it
+   while the 600 weight carries the emphasis. */
 .hero__tagline {
   font-family: var(--font-ui);
-  font-size: 0.875rem;
-  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-soft);
   margin: 0 0 1.4rem;
 }
 
@@ -657,15 +662,33 @@ sup[role="doc-noteref"] a, a.footnote { text-decoration: none; font-weight: 600;
   margin: 0;
 }
 
+/* var(--text), not a literal black: it resolves to near-black in the light
+   theme and near-white in the dark one, so the note stays readable in both.
+   A hard-coded #000 would disappear against the dark background. */
 .paper__note {
   font-family: var(--font-ui);
-  font-size: 0.8125rem;
-  color: var(--muted);
+  font-size: 0.875rem;
+  color: var(--text);
   margin: 0.5rem 0 0;
   line-height: 1.5;
 }
 
-/* Link chips */
+/* Link chips
+
+   Doubled-up `.prose .chips` selectors are deliberate, not redundant. Pages
+   using _layouts/page.html render their content inside .prose, whose generic
+   list styles are more specific than a bare `.chips` and were winning:
+
+     .prose ul     (0,1,1)  padding-left: 1.4rem  indented the whole row 22.4px
+                            past the text above it, and margin-block: 0 wiped
+                            out the 0.75rem gap below the note
+     .prose li + li (0,1,2) margin-top: 0.5rem    pushed every chip after the
+                            first 8px below its neighbours
+
+   `.prose .chips` is (0,2,0) and `.prose .chips > li` is (0,2,1), so both
+   outrank the prose rules. Collapsing these back to plain `.chips` /
+   `.chips > li` reintroduces the misalignment. */
+.prose .chips,
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -674,6 +697,9 @@ sup[role="doc-noteref"] a, a.footnote { text-decoration: none; font-weight: 600;
   padding: 0;
   list-style: none;
 }
+/* Chips sit in one row; the prose inter-item rhythm must not apply. */
+.prose .chips > li,
+.chips > li { margin-top: 0; }
 .chip {
   display: inline-block;
   font-family: var(--font-ui);

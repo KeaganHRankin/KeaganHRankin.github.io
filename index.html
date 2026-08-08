@@ -10,7 +10,20 @@ description: >-
 <section class="hero">
   <div class="hero__intro">
     <h1 class="hero__name">Keagan Hudson Rankin</h1>
-    <p class="hero__tagline">PhD student &amp; Vanier Scholar &middot; University of Toronto Engineering</p>
+    <p class="hero__tagline">PhD candidate &amp; Vanier Scholar &middot; <a href="{{ site.research_group }}" target="_blank" rel="noopener">University of Toronto Engineering</a>
+    </p>
+      <div class="prose home-prose">
+    <p>
+      My research
+      investigates the resource demands of future human development. I think about
+      how we can design material &amp; energy systems that meet future demand within planetary limits.
+      I'm also interested in epistemic questions r.e. how we use and interpret computational models (e.g. machine learning,
+      energy system optimizations, stochastic simulations) in applied sciences.
+      I spent part of my PhD at the <a href="https://www-csd.eng.cam.ac.uk/" target="_blank" rel="noopener">University of Cambridge Centre for Sustainable Development</a>,
+      and before Toronto I completed a BScEng at the University of New Brunswick.
+
+    </p>
+    </div>
   </div>
 
   <div class="hero__portrait-wrap">
@@ -22,6 +35,7 @@ description: >-
   </div>
 </section>
 
+{%- comment -%}
 <dl class="factlist">
   <dt>CV</dt>
   <dd><a href="{{ site.cv_url }}" target="_blank" rel="noopener">khr_cv_short_02_2026.pdf</a></dd>
@@ -32,81 +46,7 @@ description: >-
   <dt>Group</dt>
   <dd><a href="{{ site.research_group }}" target="_blank" rel="noopener">Sustainable Systems, U of T CivMin</a></dd>
 </dl>
-
-
-{%- comment -%}
-  The Research and Personal Stuff copy below is preserved verbatim from the
-  previous site. Only the markup around it changed: the <ul>s are no longer
-  nested inside <p>s (which was invalid and forced an inline <style> override).
 {%- endcomment -%}
-
-<section class="home-section" id="research">
-  <div class="section-head">
-    <h2>Research</h2>
-  </div>
-
-  <div class="prose home-prose">
-    <p>
-      I am a PhD student and Vanier Scholar at University of Toronto Engineering. My research
-      (supervised by <a href="https://civmin.utoronto.ca/home/about-us/directory/professors/shoshanna-saxe/" target="_blank" rel="noopener">Shoshanna Saxe</a>
-      and <a href="https://civmin.utoronto.ca/home/about-us/directory/professors/daniel-posen/" target="_blank" rel="noopener">Daniel Posen</a>)
-      investigates the material demands of cities and infrastructure systems.
-      I am determining the amount of materials we need, how demand for materials effects our energy systems,
-      and how we can meet material demands without overstepping climate limits. I'm also interested epistemic questions regarding how we build, use
-      and interpret models (e.g. machine learning) in applied science.
-      Some examples of my research:
-    </p>
-
-    <ul>
-      <li><a href="https://doi.org/10.1021/acs.est.4c02070" target="_blank" rel="noopener">The Future Infrastructure Growth (FIG) model</a>, a simulation tool we created that won a
-        <a href="https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/funding-programs/all-funding-programs/housing-research-awardsnational" target="_blank" rel="noopener">national research award</a> from the Canadian Government.</li>
-
-      <li><a href="https://doi.org/10.1111/jiec.13461" target="_blank" rel="noopener">A dataset</a> we built using LCA and BIM tools to determine why some types of housing have lower material GHG emissions than others. This work helped inform changes to Toronto's
-        <a href="https://www.toronto.ca/city-government/planning-development/planning-studies-initiatives/expanding-housing-options/" target="_blank" rel="noopener">housing policy</a>.</li>
-    </ul>
-
-    <p>
-      I recently returned from a visting position at the <a href="https://www-csd.eng.cam.ac.uk/" target="_blank" rel="noopener">University of Cambridge</a>, where I was leading
-      a <a href="https://doi.org/10.1038/s44284-025-00379-8" target="_blank" rel="noopener">project</a> to determine the carbon budgets of thousands of cities across the world. I completed my BSc in Engineering at the University of New Brunswick in my hometown of Fredericton, NB.
-    </p>
-  </div>
-</section>
-
-
-<section class="home-section" id="personal">
-  <div class="section-head">
-    <h2>Personal Stuff</h2>
-  </div>
-
-  <div class="prose home-prose">
-    <p>Here are some other things I enjoy:</p>
-
-    <ul>
-      <li>I try to read non-PhD related material when I get the chance (i.e. rarely). Here are some books I am currently part way through or recently finished:
-        <br><i> Imperial Twilight: The Opium War and the End of China's Last Golden Age</i> - Steven Platt
-        <br><i> One Hundred Years of Solitude</i> - Gabriel Garcia Marquez
-        <br><i> Game Wizards: The Epic Battle for Dungeons &amp; Dragons</i> - Jon Peterson
-      </li>
-      <li>I lived in and have sat on the board of directors for CCRI, Canada's oldest housing cooperative. We're a democratic entity that
-        provides housing to &gt;200 students in downtown Toronto at well below market rate.</li>
-      <li>I was a lightweight rower in a past life. I picked up the sport again while in Cambridge, and I am trying to regain my former speed.
-        <!--Some of my rowing achievements include:-->
-        <!--<br> -Competing at the 2017 Canada Games in the lwt M4-, -->
-        <!--<br> -3x Atlantic Canadian university championship titles, including the overall club title in 2019.-->
-        <!--<br> -Blades + 3rd on river in the 2025 Cambridge Lent bumps, rowing bow in Clare College's M1.-->
-        <br>My last 2k was: <i>6:54</i> in <i>Jan 2025</i>.
-        <br>My current goal: maintaining and <br>sub <i>7</i> by <i>Fall 2026</i>.
-      </li>
-
-      <!--<li>Side Project(s):
-        I took an class on computational statistics while in Cambridge, where I learned about advanced Monte Carlo methods,
-        Lebesgue integrals, and some measure theory. I'm attempting implement these ideas for geospatial
-        prediction of food consumption impacts. I'm using an LLM workflow to speed up implementation in Python or R.
-      </li>-->
-    </ul>
-  </div>
-</section>
-
 
 {%- comment -%}
   Three newest papers from _data/papers.yml. Grouped by year and sorted
@@ -118,9 +58,26 @@ description: >-
 {% if site.data.papers.size > 0 %}
   <section class="home-section">
     <div class="section-head">
-      <h2>Selected papers</h2>
-      <a href="/papers/">All papers &amp; talks &rarr;</a>
+      <h2>Research and selected papers</h2>
+      <a href="/papers/">All papers &rarr;</a>
     </div>
+
+    <p>
+      My primary doctoral work is supervised by <a href="https://civmin.utoronto.ca/home/about-us/directory/professors/shoshanna-saxe/" target="_blank" rel="noopener">Shoshanna Saxe</a>
+      and <a href="https://civmin.utoronto.ca/home/about-us/directory/professors/daniel-posen/" target="_blank" rel="noopener">Daniel Posen</a>.
+      Our research has helped inform <a href="https://www.toronto.ca/city-government/planning-development/planning-studies-initiatives/expanding-housing-options/" target="_blank" rel="noopener">housing and zoning policy</a>
+      in the City of Toronto and other <a href="https://measuringmainstreets.ca/reports/tod/embodied-carbon" target="_blank" rel="noopener">municipalities across Canada</a>.
+      We won <a href="https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/funding-programs/all-funding-programs/housing-research-awards/gold-roof-award-for-housing-research" target="_blank" rel="noopener">national research award</a> from the Canadian Federal Government
+      in 2024 for our research on climate-compatible housing. Our work has been covered by media outlets like <a href="https://www.forbes.com/sites/lauriewinkless/2026/02/15/urban-construction-boom-threatens-climate-goals/" target="_blank" rel="noopener">Forbes</a>.
+    </p>
+
+    <p>
+      I'm also involved in a few collaborations with international colleagues. Several <a href="https://is4ie.org/" target="_blank" rel="noopener">ISIE members</a> and I are researching how rapid developments
+      in AI are affecting the reproducibility of sustainabiltiy science and life cycle assessment.
+      I'm also working with the <a href="https://www.resourcepanel.org" target="_blank" rel="noopener">IRP</a> at the United Nations EP to
+      model the possible growth pathways, and environmental impacts, of cities in developing countries.
+      Links to some recent papers are included below:
+    </p>
 
     <ul class="entry-list">
       {%- assign shown = 0 -%}
@@ -145,6 +102,42 @@ description: >-
     </ul>
   </section>
 {% endif %}
+
+
+<section class="home-section" id="personal">
+  <div class="section-head">
+    <h2>Personal stuff</h2>
+  </div>
+
+  <div class="prose home-prose">
+    <ul>
+      <li>I try to read non-PhD related material when I get the chance. Here are some books I am currently part way through or recently finished:
+        <br><i> Imperial Twilight: The Opium War and the End of China's Last Golden Age</i> - Steven Platt
+        <br><i> One Hundred Years of Solitude</i> - Gabriel Garcia Marquez
+        <br><i> Game Wizards: The Epic Battle for Dungeons &amp; Dragons</i> - Jon Peterson
+        <br><i> Lincoln in the Bardo</i> - George Saunders
+        <br><i> Midnight's Children</i> - Salman Rushdie (this one is collecting dust on my shelf)
+      </li>
+      <li>I used to live in and sit on the board of directors for CCRI, Canada's oldest housing cooperative. We're a democratic entity that
+        provides housing to &gt;200 students in downtown Toronto at well below market rate.</li>
+      <li>I was a lightweight rower in a past life. I picked up the sport again while in Cambridge, but I'm currently relegated to erging solo a few times a week.
+        <!--Some of my rowing achievements include:-->
+        <!--<br> -Competing at the 2017 Canada Games in the lwt M4-, -->
+        <!--<br> -3x Atlantic Canadian university championship titles, including the overall club title in 2019.-->
+        <!--<br> -Blades + 3rd on river in the 2025 Cambridge Lent bumps, rowing bow in Clare College's M1.-->
+        <br>My last 2k was: <i>6:54</i> in <i>Jan 2025</i>.
+        <br>My current goal: maintaining and <br>sub <i>7</i> by <i>Fall 2026</i>.
+      </li>
+      <li>I have this <a href="https://lifeaa.substack.com/" target="_blank" rel="noopener">substack</a>, where I might write something someday.</li>
+
+      <!--<li>Side Project(s):
+        I took an class on computational statistics while in Cambridge, where I learned about advanced Monte Carlo methods,
+        Lebesgue integrals, and some measure theory. I'm attempting implement these ideas for geospatial
+        prediction of food consumption impacts. I'm using an LLM workflow to speed up implementation in Python or R.
+      </li>-->
+    </ul>
+  </div>
+</section>
 
 
 {%- comment -%}

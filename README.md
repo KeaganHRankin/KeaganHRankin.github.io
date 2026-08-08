@@ -39,7 +39,11 @@ Append to `_data/papers.yml`; drop a thumbnail in `images/papers/`. The
     - {label: "Forbes", url: "https://..."}
 ```
 
-Talks and press: `_data/talks.yml`, `_data/press.yml`.
+`type` is metadata only — `/papers/` renders one combined list, not separate
+journal and conference sections.
+
+`_data/talks.yml` and `_data/press.yml` are kept for reference but are no longer
+rendered on any page.
 
 ## Update the CV
 

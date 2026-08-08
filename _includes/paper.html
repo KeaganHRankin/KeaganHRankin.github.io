@@ -4,7 +4,8 @@
   Usage:  {% include paper.html paper=paper %}
 
   Fields:  title, authors, venue, year, type
-           doi, pdf, code, data, slides   (optional link targets)
+           doi                            (linked from the title, not a chip)
+           pdf, code, data, slides        (optional link chips)
            note                           (award / policy-impact line)
            links: [{label, url}]          (press or anything else)
            thumb                          (falls back to a placeholder, so the
@@ -52,14 +53,19 @@
       <p class="paper__note">{{ pub.note }}</p>
     {% endif %}
 
+    {%- comment -%}
+      No DOI chip: the title itself links to the DOI (see pub_href above), so a
+      chip would be a duplicate of that link. `doi` is therefore deliberately
+      absent from the pub_chips test below — including it would render an empty
+      <ul> for a paper whose only link target is its DOI.
+    {%- endcomment -%}
     {%- assign pub_chips = false -%}
-    {%- if pub.doi or pub.pdf or pub.code or pub.data or pub.slides or pub.links -%}
+    {%- if pub.pdf or pub.code or pub.data or pub.slides or pub.links -%}
       {%- assign pub_chips = true -%}
     {%- endif -%}
 
     {% if pub_chips %}
       <ul class="chips">
-        {% if pub.doi %}<li><a class="chip" href="{{ pub.doi }}" target="_blank" rel="noopener">DOI</a></li>{% endif %}
         {% if pub.pdf %}<li><a class="chip" href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a></li>{% endif %}
         {% if pub.code %}<li><a class="chip" href="{{ pub.code }}" target="_blank" rel="noopener">Code</a></li>{% endif %}
         {% if pub.data %}<li><a class="chip" href="{{ pub.data }}" target="_blank" rel="noopener">Data</a></li>{% endif %}

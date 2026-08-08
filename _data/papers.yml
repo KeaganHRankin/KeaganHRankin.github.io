@@ -1,8 +1,9 @@
 # Publications.
 #
-# TO ADD A PAPER: copy a block below, keep it in the right `type` group, and
-# drop a thumbnail in images/papers/. Nothing else needs editing — /papers/
-# sorts by year and groups automatically.
+# TO ADD A PAPER: copy a block below and drop a thumbnail in images/papers/.
+# Nothing else needs editing — /papers/ renders one combined list, grouped and
+# sorted by year, so where the entry sits in this file only decides its order
+# within its own year.
 #
 # Fields
 #   year     required, drives the year headings and sort order
@@ -10,7 +11,8 @@
 #   authors  plain text; "K H Rankin" is bolded automatically, so write your
 #            name exactly that way
 #   venue    journal or conference name
-#   type     journal | conference
+#   type     journal | conference — metadata only, not rendered and not used
+#            for grouping
 #   doi      full https://doi.org/... URL
 #   pdf      e.g. /files/my-paper.pdf  (drop the PDF in files/)
 #   code     repository URL
@@ -20,66 +22,45 @@
 #   thumb    /images/papers/<name>.svg|.png — omit and it falls back to a
 #            neutral placeholder rather than breaking
 
-# ---------------------------------------------------------------- journal ---
-
 - year: 2026
   type: journal
   title: "The climate limits of construction in over 1,000 cities"
-  authors: "K H Rankin, et al."
+  authors: "Keagan Hudson Rankin, Andre Cabrera Serrenho, Chris Bachmann, I. Daniel Posen, Shoshanna Saxe."
   venue: "Nature Cities"
   doi: "https://doi.org/10.1038/s44284-025-00379-8"
-  note: "Carbon budgets for construction across more than a thousand cities worldwide."
-  thumb: /images/papers/climate-limits.svg
+  note: "The construction and maintenance of cities is the largest undertaking (by mass) of human society. 
+         Despite this, cities don't know how their construction activities affect the environment, nor do they have plans to reduce their impacts.
+         We find this information for over 1000+ cities across the world."
+  thumb: /images/papers/budgets_fig2.png
   links:
-    - {label: "Forbes", url: "https://www.forbes.com/sites/lauriewinkless/2026/02/15/urban-construction-boom-threatens-climate-goals/"}
+    - {label: "Forbes Article", url: "https://www.forbes.com/sites/lauriewinkless/2026/02/15/urban-construction-boom-threatens-climate-goals/"}
 
 - year: 2024
   type: journal
   title: "A future growth model for building more housing and infrastructure with less embodied greenhouse gas emissions"
-  authors: "K H Rankin, S Saxe"
+  authors: "Keagan Hudson Rankin, Shoshanna Saxe"
   venue: "Environmental Science & Technology"
   doi: "https://doi.org/10.1021/acs.est.4c02070"
-  note: "The Future Infrastructure Growth (FIG) model. Won the CMHC Gold Roof Award for Housing Research."
+  note: "We create The Future Infrastructure Growth (FIG) model. This model takes advantage of widespread census data and the assumption that
+         future neighbourhoods will probably be laid out like current ones. We sample a bunch of existing neighbourhoods, quantify their emissions, and then
+         use this to simulate future development."
   # Reusing the existing starts_forecast.png — confirm this figure belongs to
   # this paper, or swap it for the right one.
-  thumb: /images/starts_forecast.png
+  thumb: /images/papers/fig_abstract.png
   links:
-    - {label: "New Scientist", url: "https://www.newscientist.com/article/2511350-we-must-completely-change-the-way-we-build-homes-to-stay-below-2c/"}
-    - {label: "U of T News", url: "https://news.engineering.utoronto.ca/how-to-build-more-with-less-new-model-shows-how-canada-can-reconcile-its-housing-and-climate-targets-by-adopting-established-sustainable-construction-practices/"}
-    - {label: "Award", url: "https://www.cmhc-schl.gc.ca/professionals/project-funding-and-mortgage-financing/funding-programs/all-funding-programs/housing-research-awardsnational"}
-
+  
 - year: 2024
   type: journal
   title: "Embodied GHG of missing middle: residential building forms and strategies for more efficient housing"
-  authors: "K H Rankin, Arceo, Isin, Saxe"
+  authors: "Keagan Hudson Rankin, Aldrick Arceo, Kaan Isin, Shoshanna Saxe"
   venue: "Journal of Industrial Ecology"
   doi: "https://doi.org/10.1111/jiec.13461"
-  note: "An LCA and BIM dataset on why some housing forms carry lower material emissions. Informed changes to Toronto's Expanding Housing Options policy."
-  thumb: /images/papers/missing-middle.svg
+  note: "Researchers have made a lot of assumptions around what types of housing (e.g. single family vs. multi-unit low rise vs. highrise towers)
+         might have more or less GHG impact. We collected a bunch of data to actually test these assumptions. We found, suprisingly, that how you design
+         a building is way more important than the form of the building in reducing life-cycle emissions (though multi-unit buildings have less embodied emissions
+         on average)."
+  thumb: /images/papers/mat_contents.png
   links:
-    - {label: "Policy", url: "https://www.toronto.ca/city-government/planning-development/planning-studies-initiatives/expanding-housing-options/"}
+    - {label: "Toronto housing options policy", url: "https://www.toronto.ca/city-government/planning-development/planning-studies-initiatives/expanding-housing-options/"}
 
-# TODO: no DOI for this one in the CV — add `doi:` when you have the link.
-- year: 2024
-  type: journal
-  title: "A top-down assessment of GHG emissions in the Canadian construction sector"
-  authors: "Yoffe, K H Rankin, Bachmann, Saxe, Posen"
-  venue: "Environmental Research: Infrastructure and Sustainability"
-  thumb: /images/papers/construction-sector.svg
 
-# ------------------------------------------------------------- conference ---
-
-# TODO: add a `pdf:` or `doi:` for the two conference papers if you have one.
-- year: 2023
-  type: conference
-  title: "Forecasting embodied housing emissions and material efficiency scenarios to 2030 in Ontario, Canada"
-  authors: "K H Rankin, Arceo, Yoffe, Isin, Saxe"
-  venue: "International Society for Industrial Ecology (ISIE) 2023"
-  thumb: /images/papers/ontario-2030.svg
-
-- year: 2022
-  type: conference
-  title: "Pull-based simulation modeling for modular supply chain analysis: a case study in Northern Canada"
-  authors: "K H Rankin, Zhuo, Lei, Rizaee, Searle, Ene, Amuno"
-  venue: "Proceedings of the Canadian Society for Civil Engineering Annual Conference"
-  thumb: /images/papers/modular-supply.svg
