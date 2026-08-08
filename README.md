@@ -3,7 +3,7 @@
 Jekyll site, built automatically by GitHub Pages on every push to `main`.
 No build step to run yourself.
 
-## Write a post
+## Write a post - depreciated
 
 Create `_posts/YYYY-MM-DD-some-slug.md` — the date prefix is required.
 
@@ -39,7 +39,7 @@ Append to `_data/papers.yml`; drop a thumbnail in `images/papers/`. The
     - {label: "Forbes", url: "https://..."}
 ```
 
-`type` is metadata only — `/papers/` renders one combined list, not separate
+`type` is metadata only. `/papers/` renders one combined list, not separate
 journal and conference sections.
 
 `_data/talks.yml` and `_data/press.yml` are kept for reference but are no longer
@@ -77,5 +77,3 @@ winget install RubyInstallerTeam.RubyWithDevKit.3.3
 gem install bundler
 bundle install && bundle exec jekyll serve --livereload
 ```
-
-Pause OneDrive sync while serving — it can lock files mid-build.
